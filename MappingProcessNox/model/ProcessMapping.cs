@@ -6,13 +6,14 @@ namespace MappingProcessNox.model
     public class ProcessMapping
     {
         public int index;
-        private int handleProcessId;
-        private string handleProcessName;
-        private IntPtr handleProcessHandle;
+        public int handleProcessId;
+        public string handleProcessName;
+        public IntPtr handleProcessHandle;
+        public string commandRunByHandleProcess;
 
-        private int memoryProcessId;
-        private string memoryProcessName;
-        private IntPtr memoryProcessHandle;
+        public int memoryProcessId;
+        public string memoryProcessName;
+        public IntPtr memoryProcessHandle;
 
         public string displayComboxProcess
         {
@@ -21,8 +22,6 @@ namespace MappingProcessNox.model
                 return handleProcessName + " " + "(" + handleProcessId + ")" + ":" + "(" + memoryProcessId + ")";
             }
         }
-
-
 
         public ProcessMapping(int index,
                                 Process itemHandleProcess,
